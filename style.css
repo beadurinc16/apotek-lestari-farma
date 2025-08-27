@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #198754;
+}
+
+.navbar-brand, .nav-link {
+  color: white !important;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 100px 20px;
+  background: #f8f9fa;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #198754;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.wa-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.wa-btn:hover {
+  background-color: #1ebe5c;
+  color: white;
+}
+
+footer {
+  background: #198754;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
