@@ -24,6 +24,8 @@ body {
 
 .navbar .logo {
   height: 55px;
+  width: auto;
+  display: block; /* pastikan tampil */
 }
 
 .navbar nav a {
