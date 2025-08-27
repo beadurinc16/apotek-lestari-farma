@@ -1,104 +1,96 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lestari Farma - Apotek Cianjur</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #333;
-      <body>
-    <div style="text-align: center; margin-top: 30px;">
-        <img src="logo.avif.avif" alt="Logo Apotek Lestari Farma" width="200">
-        <h1>Apotek Lestari Farma</h1>
-        <p>Solusi kesehatan terpercaya untuk Anda dan keluarga</p>
-    </div>
-</body>
-
-    }
-    header {
-      text-align: center;
-      background: #1D4ED8;
-      color: white;
-      padding: 20px;
-    }
-    header img {
-      height: 100px;
-      margin-bottom: 10px;
-    }
-    header h1 {
-      margin: 5px 0;
-      font-size: 28px;
-    }
-    header p {
-      margin: 3px 0;
-    }
-    section {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #1D4ED8;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
-    .promo ul {
-      padding-left: 20px;
-    }
-    .contact {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .contact a {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .contact a:hover {
-      background: #128C7E;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apotek Lestari Farma</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #1abc9c, #16a085);
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            padding: 40px 20px;
+        }
+        header img {
+            width: 150px;
+            border-radius: 50%;
+            background: #fff;
+            padding: 10px;
+        }
+        header h1 {
+            margin-top: 20px;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        main {
+            background: #ffffff;
+            color: #333;
+            padding: 40px 20px;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+        main h2 {
+            color: #16a085;
+            margin-bottom: 20px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            background: #16a085;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="logo.avif.avif" alt="Logo Apotek Lestari Farma">
+        <h1>Apotek Lestari Farma</h1>
+        <p>Solusi kesehatan terpercaya untuk Anda dan keluarga</p>
+    </header>
 
-  <header>
-    <img src="logo.avif" alt="Logo Lestari Farma">
-    <h1>Lestari Farma</h1>
-    <p>Kp. Danasuta RT/RW 03/08 Desa Ciharashas, Kec. Cilaku - Cianjur Jawa Barat</p>
-    <p>Telp/WA: <a href="https://wa.me/6287886197451" style="color:white;">087886197451</a></p>
-    <p>Jam buka: 08.00 - 20.00 WIB</p>
-    <p>Apoteker: Apt. Ai Lestari, S.Farm</p>
-  </header>
+    <main>
+        <h2>Layanan Kami</h2>
+        <div class="services">
+            <div class="card">
+                <h3>Obat Resep</h3>
+                <p>Penyediaan obat sesuai resep dokter dengan kualitas terjamin.</p>
+            </div>
+            <div class="card">
+                <h3>Obat Bebas</h3>
+                <p>Beragam pilihan obat bebas untuk kebutuhan kesehatan sehari-hari.</p>
+            </div>
+            <div class="card">
+                <h3>Konsultasi</h3>
+                <p>Layanan konsultasi farmasi untuk membantu Anda memilih obat dengan tepat.</p>
+            </div>
+        </div>
+    </main>
 
-  <section class="promo">
-    <h2>Layanan Kami</h2>
-    <p>Kami menyediakan Obat untuk setiap kebutuhan dan melayani:</p>
-    <ul>
-      <li>Konsultasi Apoteker (Gratis)</li>
-      <li>Pemeriksaan Tensi Darah</li>
-      <li>Pemeriksaan Gula Darah</li>
-      <li>Pemeriksaan Kolesterol</li>
-      <li>Pemeriksaan Asam Urat</li>
-    </ul>
-  </section>
-
-  <section class="contact">
-    <h2>Hubungi Kami</h2>
-    <a href="https://wa.me/6287886197451" target="_blank">Chat via WhatsApp</a>
-  </section>
-
+    <footer>
+        <p>&copy; 2025 Apotek Lestari Farma. Semua Hak Dilindungi.</p>
+    </footer>
 </body>
 </html>
-
