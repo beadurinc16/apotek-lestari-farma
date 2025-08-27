@@ -1,65 +1,202 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Apotek Lestari Farma</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apotek Lestari Farma</title>
+    <style>
+        /* Reset & font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #1D4ED8; /* Warna merek */
+            padding: 15px 30px;
+            color: white;
+        }
+        .navbar .logo img {
+            max-height: 50px;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin-left: 25px;
+        }
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px 50px 20px;
+            background-color: #1D4ED8;
+            color: white;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Info Apotek */
+        .info {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .info h2 {
+            color: #1D4ED8;
+            margin-bottom: 15px;
+        }
+        .info p {
+            margin-bottom: 8px;
+        }
+
+        /* Produk */
+        .products {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .product-card h3 {
+            color: #1D4ED8;
+            margin-bottom: 10px;
+        }
+        .product-card p {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        /* Promo/Layanan */
+        .promo {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1D4ED8;
+            color: white;
+            border-radius: 10px;
+        }
+        .promo h2 {
+            margin-bottom: 15px;
+        }
+        .promo ul {
+            list-style: disc inside;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <header class="navbar">
-    <img src="assets/img/logo.png" alt="Logo Apotek Lestari Farma" class="logo">
-    <nav>
-      <a href="#home">Beranda</a>
-      <a href="#produk">Produk</a>
-      <a href="#tentang">Tentang Kami</a>
-      <a href="#kontak">Kontak</a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Logo Apotek Lestari Farma">
+        </div>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Kontak</a></li>
+            <li><a href="https://wa.me/6287886197451" target="_blank">Chat WA</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Hero -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Selamat Datang di Apotek Lestari Farma</h1>
-      <p>Solusi kesehatan terpercaya untuk Anda dan keluarga.</p>
-      <a href="https://wa.me/6281234567890" target="_blank" class="btn-wa">Hubungi via WhatsApp</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Apotek Lestari Farma</h1>
+        <p>Kp. Danasuta RT/RW 03/08, Desa Ciharashas, Kec. Cilaku - Cianjur, Jawa Barat</p>
+        <p>Telp/WA: <a href="https://wa.me/6287886197451" style="color:#ffeb3b;">087886197451</a></p>
+        <p>Jam Buka: 08.00 - 20.00 WIB</p>
+        <p>Apoteker: Apt. Ai Lestari, S.Farm</p>
+    </section>
+
+    <!-- Info Produk Unggulan -->
+    <div class="products">
+        <div class="product-card">
+            <h3>Paracetamol</h3>
+            <p>Harga: Rp 5.000</p>
+        </div>
+        <div class="product-card">
+            <h3>Vitamin C</h3>
+            <p>Harga: Rp 20.000</p>
+        </div>
+        <div class="product-card">
+            <h3>Obat Flu</h3>
+            <p>Harga: Rp 15.000</p>
+        </div>
+        <div class="product-card">
+            <h3>Salep Luka</h3>
+            <p>Harga: Rp 10.000</p>
+        </div>
+        <div class="product-card">
+            <h3>Minyak Angin</h3>
+            <p>Harga: Rp 8.000</p>
+        </div>
     </div>
-  </section>
 
-  <!-- Produk -->
-  <section id="produk" class="produk">
-    <h2>Produk Kami</h2>
-    <div class="produk-grid">
-      <div class="card">💊 Obat Resep</div>
-      <div class="card">🌿 Obat Bebas</div>
-      <div class="card">🩺 Alat Kesehatan</div>
+    <!-- Promo & Layanan -->
+    <div class="promo">
+        <h2>Promo & Layanan</h2>
+        <p>Kami menyediakan obat untuk setiap kebutuhan dan kami melayani:</p>
+        <ul>
+            <li>Konsultasi Apoteker (Free)</li>
+            <li>Pemeriksaan Tensi Darah</li>
+            <li>Pemeriksaan Gula Darah</li>
+            <li>Pemeriksaan Kolesterol</li>
+            <li>Pemeriksaan Asam Urat</li>
+        </ul>
     </div>
-  </section>
 
-  <!-- Tentang -->
-  <section id="tentang" class="tentang">
-    <h2>Tentang Kami</h2>
-    <p>Apotek Lestari Farma berdedikasi memberikan pelayanan kesehatan terbaik dengan produk berkualitas dan pelayanan ramah.</p>
-  </section>
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/6287886197451" target="_blank" class="whatsapp-float">
+        <img src="assets/img/whatsapp-icon.png" alt="Chat WA" style="width:100%;height:100%;">
+    </a>
 
-  <!-- Kontak -->
-  <section id="kontak" class="kontak">
-    <h2>Kontak Kami</h2>
-    <p>📍 Alamat: Jl. Contoh Sehat No.123, Kota Anda</p>
-    <p>☎️ Telepon: (021) 1234567</p>
-    <p>📧 Email: info@apoteklestarifarma.com</p>
-    <a href="https://wa.me/6287886197451" target="_blank" class="btn-wa">Chat WhatsApp</a>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Apotek Lestari Farma. All rights reserved.</p>
-  </footer>
 </body>
 </html>
-
-
-
-
-
