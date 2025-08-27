@@ -8,179 +8,11 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
-        /* Reset & font */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            background-color: #f4f6f8;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #1D4ED8;
-            padding: 15px 30px;
-            color: white;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .navbar .logo img {
-            max-height: 50px;
-        }
-        .navbar ul {
-            list-style: none;
-            display: flex;
-        }
-        .navbar ul li {
-            margin-left: 25px;
-        }
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-        .navbar ul li a:hover {
-            color: #ffeb3b;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 120px 20px 100px 20px;
-            color: white;
-            background: linear-gradient(rgba(29,78,216,0.7), rgba(29,78,216,0.7)),
-                        url('assets/img/hero-bg.jpg') no-repeat center center/cover;
-        }
-        .hero img {
-            max-width: 150px;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 15px;
-            font-weight: 700;
-            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-        }
-        .hero a.btn {
-            padding: 14px 35px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-            display: inline-block;
-            margin-top: 20px;
-        }
-        .hero a.btn:hover {
-            background-color: #1ebe5d;
-        }
-
-        /* Produk */
-        .products {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-        .product-card {
-            background-color: white;
-            border-radius: 20px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-            text-align: center;
-            padding: 25px 15px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-        .product-card h3 {
-            color: #1D4ED8;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        .product-card p {
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        /* Layanan / Promo */
-        .promo {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 25px 30px;
-            background-color: #1D4ED8;
-            color: white;
-            border-radius: 20px;
-            text-align: left;
-        }
-        .promo h2 {
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-        .promo ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .promo ul li {
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        .promo ul li i {
-            margin-right: 10px;
-            color: #ffeb3b;
-        }
-
-        /* Floating WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 100;
-            width: 65px;
-            height: 65px;
-        }
-
-        /* Responsive sederhana */
-        @media (max-width: 768px) {
-            .navbar ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .navbar ul li {
-                margin-left: 0;
-                margin-top: 10px;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
@@ -190,27 +22,27 @@
             <img src="assets/img/logo.png" alt="Logo Apotek Lestari Farma">
         </div>
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Tentang</a></li>
-            <li><a href="#">Produk</a></li>
-            <li><a href="#">Kontak</a></li>
+            <li><a href="#hero">Beranda</a></li>
+            <li><a href="#products">Produk</a></li>
+            <li><a href="#promo">Layanan</a></li>
+            <li><a href="#contact">Kontak</a></li>
             <li><a href="https://wa.me/6287886197451" target="_blank">Chat WA</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section id="hero" class="hero animate">
         <img src="assets/img/logo.png" alt="Logo Apotek Lestari Farma">
         <h1>Apotek Lestari Farma</h1>
         <p>Kp. Danasuta RT/RW 03/08, Desa Ciharashas, Kec. Cilaku - Cianjur, Jawa Barat</p>
-        <p>Telp/WA: <a href="https://wa.me/6287886197451" style="color:#ffeb3b;">087886197451</a></p>
+        <p>Telp/WA: <a href="https://wa.me/6287886197451">087886197451</a></p>
         <p>Jam Buka: 08.00 - 20.00 WIB</p>
         <p>Apoteker: Apt. Ai Lestari, S.Farm</p>
         <a href="https://wa.me/6287886197451" target="_blank" class="btn">Chat WhatsApp Sekarang</a>
     </section>
 
     <!-- Produk Unggulan -->
-    <div class="products">
+    <section id="products" class="products animate">
         <div class="product-card">
             <h3>Paracetamol</h3>
             <p>Harga: Rp 5.000</p>
@@ -231,10 +63,10 @@
             <h3>Minyak Angin</h3>
             <p>Harga: Rp 8.000</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Promo & Layanan dengan ikon -->
-    <div class="promo">
+    <!-- Promo & Layanan -->
+    <section id="promo" class="promo animate">
         <h2>Promo & Layanan</h2>
         <ul>
             <li><i class="fas fa-user-md"></i>Konsultasi Apoteker (Free)</li>
@@ -243,12 +75,14 @@
             <li><i class="fas fa-chart-line"></i>Pemeriksaan Kolesterol</li>
             <li><i class="fas fa-stethoscope"></i>Pemeriksaan Asam Urat</li>
         </ul>
-    </div>
+    </section>
 
     <!-- Floating WhatsApp -->
     <a href="https://wa.me/6287886197451" target="_blank" class="whatsapp-float">
-        <img src="assets/img/whatsapp-icon.png" alt="Chat WA" style="width:100%;height:100%;">
+        <img src="assets/img/whatsapp-icon.png" alt="Chat WA">
     </a>
 
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
