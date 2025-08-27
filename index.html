@@ -1,228 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apotek Lestari Farma — Layanan & Pemesanan</title>
-  <meta name="description" content="Apotek Lestari Farma melayani obat resep & bebas, vitamin, dan alat kesehatan. Pesan via WhatsApp atau kunjungi lokasi kami." />
-  <link rel="icon" href="favicon.ico" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Apotek Lestari Farma" />
-  <meta property="og:description" content="Layanan obat resep & bebas, vitamin, alat kesehatan. Klik untuk pesan via WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apotek Lestari Farma</title>
   <style>
-    :root {
-      --bg: #0b1020;
-      --card: #121a35;
-      --muted: #8fa3c7;
-      --text: #e8eeff;
-      --brand: #1D4ED8;
-      --accent: #10b981;
-      --radius: 16px;
-      --shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
     body {
-      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-      color: var(--text); background: radial-gradient(1200px 600px at 20% -10%, #1f2a5a44, transparent), var(--bg);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f8fafc;
+      color: #1f2937;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1100px, 92%); margin: 0 auto; }
-    header { position: sticky; top: 0; backdrop-filter: blur(10px); background: rgba(11,16,32,.6); border-bottom: 1px solid #ffffff1a; z-index: 40; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
-    .brand { display:flex; align-items:center; gap: 10px; font-weight: 700; letter-spacing: .4px; }
-    .brand .logo { width: 40px; height: 40px; border-radius: 11px; background: linear-gradient(135deg, var(--brand), #60a5fa); display:grid; place-items:center; box-shadow: var(--shadow); }
-    .brand .logo span { font-weight: 800; }
-    .menu { display:flex; gap: 18px; font-size: 14px; color: var(--muted); }
-    .btn { display:inline-flex; align-items:center; gap:10px; padding: 12px 16px; border-radius: 999px; background: var(--brand); color: white; font-weight: 600; box-shadow: var(--shadow); border: 0; cursor: pointer; }
-    .btn:hover { filter: brightness(1.05); }
-    .btn-outline { background: transparent; border: 1px solid #ffffff2a; color: var(--text); }
-    .hero { padding: 60px 0 30px; }
-    .hero-wrap { display:grid; grid-template-columns: 1.1fr .9fr; gap: 26px; align-items: center; }
-    .hero h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.1; margin: 0 0 14px; }
-    .hero p { color: var(--muted); margin: 0 0 22px; }
-    .hero .card { background: linear-gradient(180deg, #12204d, #0f1731); border: 1px solid #6ea8ff22; padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); }
-    .badges { display:flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
-    .badge { font-size: 12px; padding: 6px 10px; border:1px solid #ffffff24; border-radius: 999px; color: #dbe8ff; }
-    .grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    @media (max-width: 900px){ .hero-wrap{ grid-template-columns: 1fr; } .grid{ grid-template-columns: 1fr; } }
-    .section { padding: 34px 0; }
-    .section h2 { margin: 0 0 12px; font-size: 24px; }
-    .section p.lead { color: var(--muted); margin-top: 0; }
-    .card { background: var(--card); border: 1px solid #ffffff12; border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
-    .produk { display:grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-    @media (max-width: 700px){ .produk{ grid-template-columns: 1fr; } }
-    .produk-item { background: #0f172a; border: 1px solid #ffffff12; border-radius: 14px; padding: 14px; display:flex; gap: 12px; align-items: center; }
-    .thumb { width: 64px; height: 64px; border-radius: 10px; background: #1f2a44; display:grid; place-items:center; font-size: 12px; color:#8aa3d1; }
-    .produk-item h4{ margin: 0 0 4px; }
-    .produk-item .meta{ font-size: 12px; color: var(--muted); }
-    .promo { background: linear-gradient(90deg, #0e1b3a, #10264d); border: 1px dashed #2d4ea6; }
-    .cols { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    @media (max-width: 900px){ .cols{ grid-template-columns: 1fr; } }
-    table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    th, td { padding: 10px 8px; border-bottom: 1px solid #ffffff16; text-align: left; }
-    footer { border-top: 1px solid #ffffff16; padding: 28px 0; color: var(--muted); }
-    .wa-float { position: fixed; right: 18px; bottom: 18px; display:flex; align-items:center; gap:10px; background: #25D366; color: white; padding: 12px 16px; border-radius: 999px; box-shadow: var(--shadow); z-index: 50; }
-    .wa-float svg { width: 20px; height: 20px; fill: white; }
+    header {
+      background: #16a34a;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin: 0.3rem 0 0;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #16a34a;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .btn-wa {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+    .btn-wa:hover {
+      background: #1ebe5d;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #e5e7eb;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="container nav">
-      <a class="brand" href="#">
-        <div class="logo"><span>Rx</span></div>
-        <div>
-          <div>Apotek Lestari Farma</div>
-          <small style="color:var(--muted)">Sehat untuk Semua</small>
-        </div>
-      </a>
-      <nav class="menu">
-        <a href="#layanan">Layanan</a>
-        <a href="#produk">Produk</a>
-        <a href="#pesan">Cara Pesan</a>
-        <a href="#lokasi">Lokasi & Jam</a>
-        <a class="btn btn-outline" href="#kontak">Kontak</a>
-      </nav>
-    </div>
+    <h1>Apotek Lestari Farma</h1>
+    <p>Kp. Danasuta RT/RW 03/08 Desa Ciharashas, Kec. Cilaku - Cianjur, Jawa Barat</p>
+    <p>Buka setiap hari: 08.00 - 20.00 WIB</p>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-wrap">
-        <div>
-          <h1>Butuh Obat? Konsultasi dengan Apoteker Kami & Pesan via WhatsApp</h1>
-          <p>Apotek Lestari Farma melayani obat resep & bebas, vitamin, susu & nutrisi, serta alat kesehatan. Siap membantu <strong>antaran sekitar Cianjur</strong>.</p>
-          <div class="badges">
-            <span class="badge">✔️ Resep & Non-Resep</span>
-            <span class="badge">👩‍⚕️ Konsultasi Apoteker</span>
-            <span class="badge">🚚 Antar (opsional)</span>
-          </div>
-          <div style="margin-top: 18px; display:flex; gap: 12px; flex-wrap: wrap;">
-            <a id="cta-wa" class="btn" href="https://wa.me/6287886197451?text=Halo%20Apotek%20Lestari%20Farma%2C%20saya%20mau%20tanya%2Fpesan...">💬 Chat WhatsApp</a>
-            <a class="btn btn-outline" href="#produk">Lihat Produk</a>
-          </div>
-        </div>
-        <div class="card">
-          <strong>Promo & Layanan</strong>
-          <ul style="margin:10px 0 0 18px; color: #cfe0ff;">
-            <li>Konsultasi Apoteker (Gratis)</li>
-            <li>Pemeriksaan Tensi Darah</li>
-            <li>Pemeriksaan Gula Darah</li>
-            <li>Pemeriksaan Kolesterol</li>
-            <li>Pemeriksaan Asam Urat</li>
-          </ul>
-        </div>
-      </div>
+    <section>
+      <h2>Tentang Kami</h2>
+      <p>Kami menyediakan obat untuk setiap kebutuhan serta layanan kesehatan tambahan untuk masyarakat sekitar.</p>
     </section>
 
-    <section id="layanan" class="section">
-      <div class="container grid">
-        <div class="card">
-          <h2>Layanan</h2>
-          <p class="lead">Kami siap membantu kebutuhan kesehatan keluarga Anda.</p>
-          <ul style="margin-left: 18px; color:#dbe8ff;">
-            <li>Peracikan & Tebus Resep</li>
-            <li>Obat Bebas & OTC</li>
-            <li>Vitamin & Suplemen</li>
-            <li>Alat Kesehatan (Termometer, Oximeter, dll.)</li>
-            <li>Konsultasi Apoteker</li>
-            <li>Antar Obat (opsional)</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h2>Tentang Kami</h2>
-          <p class="lead">Apotek Lestari Farma berlokasi di Ciharashas, Cilaku - Cianjur dan telah melayani masyarakat dengan sepenuh hati.</p>
-          <p style="color:var(--muted)">Apoteker Penanggung Jawab: Apt. Ai Lestari, S.Farm</p>
-        </div>
-        <div class="card promo">
-          <h2 style="margin-top: 0">Jam Operasional</h2>
-          <p class="lead">Setiap Hari: 08.00–20.00 WIB</p>
-          <a class="btn" href="#lokasi">Lihat Lokasi</a>
-        </div>
-      </div>
+    <section>
+      <h2>Layanan Kami</h2>
+      <ul>
+        <li>Konsultasi Apoteker (Gratis)</li>
+        <li>Pemeriksaan Tensi Darah</li>
+        <li>Pemeriksaan Gula Darah</li>
+        <li>Pemeriksaan Kolesterol</li>
+        <li>Pemeriksaan Asam Urat</li>
+      </ul>
     </section>
 
-    <section id="produk" class="section">
-      <div class="container">
-        <h2>Produk Unggulan</h2>
-        <p class="lead">Beberapa contoh produk yang tersedia di Apotek Lestari Farma.</p>
-        <div class="produk">
-          <div class="produk-item">
-            <div class="thumb">Foto</div>
-            <div>
-              <h4>Vitamin C 1000 mg</h4>
-              <div class="meta">Isi 10 • Stok: Ada</div>
-            </div>
-            <div style="margin-left:auto; font-weight:700;">Rp25.000</div>
-          </div>
-          <div class="produk-item">
-            <div class="thumb">Foto</div>
-            <div>
-              <h4>Paracetamol 500 mg</h4>
-              <div class="meta">Strip • Stok: Ada</div>
-            </div>
-            <div style="margin-left:auto; font-weight:700;">Rp5.000</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pesan" class="section">
-      <div class="container cols">
-        <div class="card">
-          <h2>Cara Pesan</h2>
-          <ol style="margin-left: 18px; color:#dbe8ff;">
-            <li>Klik tombol <strong>Chat WhatsApp</strong> dan kirim daftar kebutuhan/reser.</li>
-            <li>Untuk obat resep, kirim foto resep & tunggu konfirmasi apoteker.</li>
-            <li>Pilih ambil di toko atau antar (jika tersedia).</li>
-          </ol>
-          <div style="margin-top: 10px; display:flex; gap:10px; flex-wrap:wrap;">
-            <a class="btn" href="tel:+6287886197451">📞 Telepon</a>
-            <a class="btn btn-outline" href="mailto:lestari.farma@email.com">✉️ Email</a>
-          </div>
-        </div>
-        <div id="kontak" class="card">
-          <h2>Kontak</h2>
-          <p class="lead">Alamat lengkap: Kp. Danasuta RT/RW 03/08 Desa Ciharashas, Kec. Cilaku - Cianjur Jawa Barat</p>
-          <p style="margin:6px 0;">Telepon/WA: <a href="tel:+6287886197451">+62 878-8619-7451</a></p>
-          <p style="margin:6px 0;">WhatsApp: <a href="https://wa.me/6287886197451">6287886197451</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="lokasi" class="section">
-      <div class="container cols">
-        <div class="card">
-          <h2>Lokasi & Jam Buka</h2>
-          <table>
-            <tbody>
-              <tr><td>Senin–Minggu</td><td>08.00–20.00 WIB</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="card" style="padding:0; overflow:hidden;">
-          <iframe title="Peta Lokasi Apotek" src="" width="100%" height="320" style="border:0" loading="lazy" allowfullscreen></iframe>
-        </div>
-      </div>
+    <section>
+      <h2>Hubungi Kami</h2>
+      <p>Telepon/WhatsApp: <strong>087886197451</strong></p>
+      <a class="btn-wa" href="https://wa.me/6287886197451" target="_blank">💬 Chat via WhatsApp</a>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap;">
-        <div>
-          <strong>Apotek Lestari Farma</strong><br/>
-          <span style="color:var(--muted)">Kp. Danasuta RT/RW 03/08 Desa Ciharashas, Kec. Cilaku - Cianjur Jawa Barat • Telp/WA: +62 87886197451</span>
-        </div>
-        <div style="color:var(--muted)">© <span id="year"></span> Apotek Lestari Farma • Semua hak dilindungi</div>
-      </div>
-    </div>
+    <p>Apotek Lestari Farma &copy; 2025 | Apoteker: Apt. Ai Lestari, S.Farm</p>
   </footer>
 
-  <a class="wa-float" id="wa-float" href="https://wa.me/6287886197451?text=Halo%20Apotek%20Lestari%20Farma%2C%20saya%20ingin%20konsultasi%2Fpesan" target="_blank" rel="noopener">
-    <svg viewBox="0 0 32 32"><path d="M19.11 17.45c-.26-.13-1.52-.75-1.76-.83-.24-.09-.41-.13-.59.13-.18.26-.68.83-.83 1-.15.17-.3.19-.56.06-.26-.13-1.08-.4-2.06-1.26-.76-.68-1.27-1.52-1.42-1.78-.15-.26-.02-.4.11-.53.11-.11.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.42-.81-1.94-.21-.5-.42-.43-.59-.43h-.5c-.17 0-.45.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.93 2.
+</body>
+</html>
