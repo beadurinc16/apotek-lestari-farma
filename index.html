@@ -1,96 +1,101 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apotek Lestari Farma</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(135deg, #1abc9c, #16a085);
-            color: #fff;
-            text-align: center;
-        }
-        header {
-            padding: 40px 20px;
-        }
-        header img {
-            width: 150px;
-            border-radius: 50%;
-            background: #fff;
-            padding: 10px;
-        }
-        header h1 {
-            margin-top: 20px;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-        }
-        main {
-            background: #ffffff;
-            color: #333;
-            padding: 40px 20px;
-            border-top-left-radius: 40px;
-            border-top-right-radius: 40px;
-        }
-        main h2 {
-            color: #16a085;
-            margin-bottom: 20px;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .card {
-            background: #f9f9f9;
-            border-radius: 12px;
-            padding: 20px;
-            width: 250px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #16a085;
-            color: #fff;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apotek Lestari Farma</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <img src="logo.avif.avif" alt="Logo Apotek Lestari Farma">
-        <h1>Apotek Lestari Farma</h1>
-        <p>Solusi kesehatan terpercaya untuk Anda dan keluarga</p>
-    </header>
 
-    <main>
-        <h2>Layanan Kami</h2>
-        <div class="services">
-            <div class="card">
-                <h3>Obat Resep</h3>
-                <p>Penyediaan obat sesuai resep dokter dengan kualitas terjamin.</p>
-            </div>
-            <div class="card">
-                <h3>Obat Bebas</h3>
-                <p>Beragam pilihan obat bebas untuk kebutuhan kesehatan sehari-hari.</p>
-            </div>
-            <div class="card">
-                <h3>Konsultasi</h3>
-                <p>Layanan konsultasi farmasi untuk membantu Anda memilih obat dengan tepat.</p>
-            </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo.png" alt="Logo Apotek" width="40" class="me-2">
+        <span>Apotek Lestari Farma</span>
+      </a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#produk">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="beranda" class="hero text-center">
+    <div class="container">
+      <img src="assets/img/logo.png" alt="Logo Apotek" width="120" class="mb-3">
+      <h1>Selamat Datang di Apotek Lestari Farma</h1>
+      <p>Solusi kesehatan terpercaya untuk Anda dan keluarga.</p>
+      <a class="wa-btn" href="https://wa.me/62878861974518?text=Halo%20Apotek%20Lestari%20Farma%2C%20saya%20mau%20tanya%20%2F%20pesan%20obat" target="_blank">
+        Hubungi via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <section id="produk" class="container py-5">
+    <h2 class="text-center mb-4">Produk Kami</h2>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5>Obat Resep</h5>
+          <p>Berbagai jenis obat sesuai resep dokter.</p>
         </div>
-    </main>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5>Obat Bebas</h5>
+          <p>Obat yang bisa dibeli tanpa resep.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <h5>Alat Kesehatan</h5>
+          <p>Peralatan medis untuk kebutuhan rumah tangga.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Apotek Lestari Farma. Semua Hak Dilindungi.</p>
-    </footer>
+  <!-- Tentang Kami -->
+  <section id="tentang" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4">Tentang Kami</h2>
+      <p>
+        Apotek Lestari Farma berdedikasi memberikan pelayanan kesehatan terbaik, 
+        menyediakan obat yang aman, serta konsultasi dengan tenaga farmasi profesional.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="container py-5">
+    <h2 class="text-center mb-4">Kontak Kami</h2>
+    <div class="text-center">
+      <p>Alamat: Jl. Contoh Sehat No. 123, Kota Anda</p>
+      <p>Telepon: (021) 1234567</p>
+      <p>Email: info@apoteklestarifarma.com</p>
+      <a class="wa-btn" href="https://wa.me/62878861974518?text=Halo%20Apotek%20Lestari%20Farma%2C%20saya%20mau%20tanya" target="_blank">
+        Chat WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Apotek Lestari Farma. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
